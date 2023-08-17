@@ -2,12 +2,14 @@
 /**
  * print_line - function that draws a straight line in the terminal
  *
+ * @n: input int
+ *
  * Return: void (Success)
  */
 void print_line(int n)
 {
 	int i;
-	
+
 	for (i = 1 ; i <= n ; i++)
 	{
 		if (n <= 0)

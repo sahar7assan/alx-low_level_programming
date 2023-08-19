@@ -8,13 +8,12 @@ int main(void)
 {
 	int div;
 	long pr = 612852475143;
-	long prime;
 
 	while (div < (pr / 2))
 	{
 		if ((pr % 2) == 0)
 		{
-			prime = pr / 2;
+			pr /=  2;
 			continue;
 
 		}
@@ -22,10 +21,10 @@ int main(void)
 		for (div = 3 ; div < (pr / 2) ; div += 2)
 		{
 			if ((pr % div) == 0)
-			prime = pr / div;
+			pr /= div;
 		}
 	}
 
-	printf("%ld\n", prime);
+	printf("%ld\n", pr);
 	return (0);
 }

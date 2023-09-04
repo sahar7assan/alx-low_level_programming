@@ -13,12 +13,12 @@ char *_strdup(char *str)
 	int length = 0;
 	int i;
 	int j = 0;
-	
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 1 ; str[i] != '\0' ; i++)
+	for (i = 0 ; str[i] != '\0' ; i++)
 	{
 		length++;
 	}
@@ -34,5 +34,6 @@ char *_strdup(char *str)
 		duplicate[j] = str[j];
 		j++;
 	}
+	duplicate[j] = '\0';
 	return (duplicate);
 }

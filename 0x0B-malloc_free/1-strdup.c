@@ -11,14 +11,14 @@ char *_strdup(char *str)
 {
 	char *duplicate;
 	int length = 0;
-	int i = 0;
+	int i;
 	int j = 0;
 	
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0 ; str[i] != '\0' ; i++)
+	for (i = 1 ; str[i] != '\0' ; i++)
 	{
 		length++;
 	}

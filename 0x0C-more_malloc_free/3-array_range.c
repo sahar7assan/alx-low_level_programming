@@ -2,10 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * array_range - function that creates an array of integers.
  * @min: input min value
  * @max: input max value
- * @n: number of by
- *
  * Return: pointer to orderd array
  */
 int *array_range(int min, int max)

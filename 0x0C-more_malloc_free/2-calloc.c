@@ -9,14 +9,14 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *memory;
+	char *memory;
 	unsigned int i;
 	unsigned int memlen;
 
 	if (nmemb <= 0 || size <= 0)
 		return (NULL);
 	memlen = size * nmemb;
-	memory = malloc((nmemb * size) * sizeof(int));
+	memory = malloc((size * nmemb) * sizeof(char));
 
 	if (memory == NULL)
 	{

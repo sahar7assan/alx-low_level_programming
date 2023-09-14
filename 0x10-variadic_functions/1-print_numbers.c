@@ -4,7 +4,7 @@
  * print_numbers - function that prints numbers,
  * @n:number of parmeters
  * @separator: string between numbers
- * Return: nothing 
+ * Return: nothing
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -15,14 +15,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (index = 0 ; index < n ; index++)
 	{
-		printf("%u",va_arg(ptr, unsigned int));
+		printf("%d", va_arg(ptr, unsigned int));
 
 		if (separator != NULL && index < (n - 1))
 		{
 			printf("%s", separator);
 		}
 	}
-	
 	va_end(ptr);
 	printf("\n");
 }

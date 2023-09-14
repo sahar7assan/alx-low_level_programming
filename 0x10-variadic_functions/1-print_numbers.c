@@ -3,7 +3,7 @@
 /**
  * print_numbers - function that prints numbers,
  * @n:number of parmeters
- * @separtor: string between numbers
+ * @separator: string between numbers
  * Return: nothing 
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -13,15 +13,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(ptr, n);
 
-	if (n == 0)
-	{
-		return (0);
-	}
-
 	for (index = 0 ; index < n ; index++)
 	{
-		printf("%d",va_arg(ptr, unsigned int));
+		printf("%u",va_arg(ptr, unsigned int));
+
+		if (separator != NULL && index < (n - 1))
+		{
+			printf("%s", separator);
+		}
 	}
+	
 	va_end(ptr);
-	return (add);
+	printf("\n");
 }

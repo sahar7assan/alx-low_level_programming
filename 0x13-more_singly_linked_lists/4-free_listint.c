@@ -4,10 +4,10 @@
  * free_listint - function free list.
  * @head: pointer to first node
  *
- * Return: void
+ * Return: nothing
  */
 
-void free_listint(const listint_t *head)
+void free_listint(listint_t *head)
 {
 	listint_t *node;
 
